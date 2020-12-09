@@ -1,0 +1,148 @@
+,Field,LongName,Description
+0,CensusTract,Census tract,Census tract number
+1,State,State,State name
+2,County,County,County name
+3,Urban,Urban tract,Flag for urban tract
+4,POP2010,"Population, tract total",Population count from 2010 census
+5,OHU2010,"Housing units, total",Occupied housing unit count from 2010 census
+6,GroupQuartersFlag,"Group quarters, tract with high share",Flag for tract where >=67%
+7,NUMGQTRS,"Group quarters, tract population residing in, number",Count of tract population residing in group quarters
+8,PCTGQTRS,"Group quarters, tract population residing in, share",Percent of tract population residing in group quarters
+9,LILATracts_1And10,Low income and low access tract measured at 1 mile for urban areas and 10 miles for rural areas,Flag for food desert when considering low accessibilty at 1 and 10 miles
+10,LILATracts_halfAnd10,Low income and low access tract measured at 1/2 mile for urban areas and 10 miles for rural areas,Flag for food desert when considering low accessibilty at 1/2 and 10 miles
+11,LILATracts_1And20,Low income and low access tract measured at 1 mile for urban areas and 20 miles for rural areas,Flag for food desert when considering low accessibilty at 1 and 20 miles
+12,LILATracts_Vehicle,Low income and low access tract using vehicle access or low income and low access tract measured at 20 miles,Flag for food desert when considering vehicle access or at 20 miles
+13,HUNVFlag,"Vehicle access, tract with low vehicle access","Flag for tract where >= 100 of households do not have a vehicle, and beyond 1/2 mile from supermarket"
+14,LowIncomeTracts,Low income tract,Flag for low income tract
+15,PovertyRate,Tract poverty rate,Share of the tract population living with income at or below the Federal poverty thresholds for family size
+16,MedianFamilyIncome,Tract median family income,Tract median family income
+17,LA1and10,Low access tract at 1 mile for urban areas and 10 miles for rural areas,Flag for low access tract at 1 mile for urban areas or 10 miles for rural areas
+18,LAhalfand10,Low access tract at 1/2 mile for urban areas and 10 miles for rural areas,Flag for low access tract at 1/2 mile for urban areas or 10 miles for rural areas
+19,LA1and20,Low access tract at 1 mile for urban areas and 20 miles for rural areas,Flag for low access tract at 1 mile for urban areas or 20 miles for rural areas
+20,LATracts_half,Low access tract at 1/2 mile,Flag for low access tract when considering 1/2 mile distance
+21,LATracts1,Low access tract at 1 mile,Flag for low access tract when considering 1 mile distance
+22,LATracts10,Low access tract at 10 miles,Flag for low access tract when considering 10 mile distance
+23,LATracts20,Low access tract at 20 miles,Flag for low access tract when considering 20 mile distance
+24,LATractsVehicle_20,Low access tract using vehicle access and at 20 miles  in rural areas,"Flag for tract where >= 100 of households do not have a vehicle, and beyond 1/2 mile from supermarket; or >= 500 individuals are beyond 20 miles from supermarket ; or >= 33% of individuals are beyond 20 miles from supermarket"
+25,LAPOP1_10,"Low access, population at 1 mile for urban areas and 10 miles for rural areas, number",Population count beyond 1 mile for urban areas or 10 miles for rural areas from supermarket
+26,LAPOP05_10,"Low access, population at 1/2 mile for urban areas and 10 miles for rural areas, number",Population count beyond 1/2 mile for urban areas or 10 miles for rural areas from supermarket
+27,LAPOP1_20,"Low access, population at 1 mile for urban areas and 20 miles for rural areas, number",Population count beyond 1 mile for urban areas or 20 miles for rural areas from supermarket
+28,LALOWI1_10,"Low access, low-income population at 1 mile for urban areas and 10 miles for rural areas, number",Low income population count beyond 1 mile for urban areas or 10 miles for rural areas from supermarket
+29,LALOWI05_10,"Low access, low-income population at 1/2 mile for urban areas and 10 miles for rural areas, number",Low income population count beyond 1/2 mile for urban areas or 10 miles for rural areas from supermarket
+30,LALOWI1_20,"Low access, low-income population at 1 mile for urban areas and 20 miles for rural areas, number",Low income population count beyond 1 mile for urban areas or 20 miles for rural areas from supermarket
+31,lapophalf,"Low access, population at 1/2 mile, number",Population count beyond 1/2 mile from supermarket
+32,lapophalfshare,"Low access, population at 1/2 mile, share",Share of tract population that are beyond 1/2 mile from supermarket
+33,lalowihalf,"Low access, low-income population at 1/2 mile, number",Low income population count beyond 1/2 mile from supermarket
+34,lalowihalfshare,"Low access, low-income population at 1/2 mile, share",Share of tract population that are low income individuals beyond 1/2 mile from supermarket
+35,lakidshalf,"Low access, children age 0-17 at 1/2 mile, number",Kids population count beyond 1/2 mile from supermarket
+36,lakidshalfshare,"Low access, children age 0-17 at 1/2 mile, share",Share of tract population that are kids beyond 1/2 mile from supermarket
+37,laseniorshalf,"Low access, seniors age 65+ at 1/2 mile, number",Seniors population count beyond 1/2 mile from supermarket
+38,laseniorshalfshare,"Low access, seniors age 65+ at 1/2 mile, share",Share of tract population that are seniors beyond 1/2 mile from supermarket
+39,lawhitehalf,"Low access, White population at 1/2 mile, number",White population count beyond 1/2 mile from supermarket
+40,lawhitehalfshare,"Low access, White population at 1/2 mile, share",Share of tract population that are white beyond 1/2 mile from supermarket
+41,lablackhalf,"Low access, Black or African American population at 1/2 mile, number",Black or African American population count beyond 1/2 mile from supermarket
+42,lablackhalfshare,"Low access, Black or African American population at 1/2 mile, share",Share of tract population that are Black or African American beyond 1/2 mile from supermarket
+43,laasianhalf,"Low access, Asian population at 1/2 mile, number",Asian population count beyond 1/2 mile from supermarket
+44,laasianhalfshare,"Low access, Asian population at 1/2 mile, share",Share of tract population that are Asian beyond 1/2 mile from supermarket
+45,lanhopihalf,"Low access, Native Hawaiian or Other Pacific Islander population at 1/2 mile, number",Native Hawaiian or Other Pacific Islander population count beyond 1/2 mile from supermarket
+46,lanhopihalfshare,"Low access, Native Hawaiian or Other Pacific Islander population at 1/2 mile, share",Share of tract population that are Native Hawaiian or Other Pacific Islander beyond 1/2 mile from supermarket
+47,laaianhalf,"Low access, American Indian or Alaska Native population at 1/2 mile, number",American Indian or Alaska Native population count beyond 1/2 mile from supermarket
+48,laaianhalfshare,"Low access, American Indian or Alaska Native population at 1/2 mile, share",Share of tract population that are American Indian or Alaska Native beyond 1/2 mile from supermarket
+49,laomultirhalf,"Low access, Other/Multiple race population at 1/2 mile, number",Other/Multiple race population count beyond 1/2 mile from supermarket
+50,laomultirhalfshare,"Low access, Other/Multiple race population at 1/2 mile, share",Share of tract population that are Other/Multiple race beyond 1/2 mile from supermarket
+51,lahisphalf,"Low access, Hispanic or Latino population at 1/2 mile, number",Hispanic or Latino ethnicity population count beyond 1/2 mile from supermarket
+52,lahisphalfshare,"Low access, Hispanic or Latino population at 1/2 mile, share",Share of tract population that are of Hispanic or Latino ethnicity beyond 1/2 mile from supermarket
+53,lahunvhalf,"Vehicle access, housing units without and low access at 1/2 mile, number",Housing units without vehicle count beyond 1/2 mile from supermarket
+54,lahunvhalfshare,"Vehicle access, housing units without and low access at 1/2 mile, share",Share of tract housing units that are without vehicle and beyond 1/2 mile from supermarket
+55,lasnaphalf,"Low access, housing units receiving SNAP benefits at 1/2 mile, number",Housing units receiving SNAP benefits count beyond 1/2 mile from supermarket
+56,lasnaphalfshare,"Low access, housing units receiving SNAP benefits at 1/2 mile, share",Share of tract housing units receiving SNAP benefits count beyond 1/2 mile from supermarket
+57,lapop1,"Low access, population at 1 mile, number",Population count beyond 1 mile from supermarket
+58,lapop1share,"Low access, population at 1 mile, share",Share of tract population that are beyond 1 mile from supermarket
+59,lalowi1,"Low access, low-income population at 1 mile, number",Low income population count beyond 1 mile from supermarket
+60,lalowi1share,"Low access, low-income population at 1 mile, share",Share of tract population that are low income individuals beyond 1 mile from supermarket
+61,lakids1,"Low access, children age 0-17 at 1 mile, number",Kids population count beyond 1 mile from supermarket
+62,lakids1share,"Low access, children age 0-17 at 1 mile, share",Share of tract population that are kids beyond 1 mile from supermarket
+63,laseniors1,"Low access, seniors age 65+ at 1 mile, number",Seniors population count beyond 1 mile from supermarket
+64,laseniors1share,"Low access, seniors age 65+ at 1 mile, share",Share of tract population that are seniors beyond 1 mile from supermarket
+65,lawhite1,"Low access, White population at 1 mile, number",White population count beyond 1 mile from supermarket
+66,lawhite1share,"Low access, White population at 1 mile, share",Share of tract population that are white beyond 1 mile from supermarket
+67,lablack1,"Low access, Black or African American population at 1 mile, number",Black or African American population count beyond 1 mile from supermarket
+68,lablack1share,"Low access, Black or African American population at 1 mile, share",Share of tract population that are Black or African American beyond 1 mile from supermarket
+69,laasian1,"Low access, Asian population at 1 mile, number",Asian population count beyond 1 mile from supermarket
+70,laasian1share,"Low access, Asian population at 1 mile, share",Share of tract population that are Asian beyond 1 mile from supermarket
+71,lanhopi1,"Low access, Native Hawaiian and Other Pacific Islander population at 1 mile, number",Native Hawaiian or Other Pacific Islander population count beyond 1 mile from supermarket
+72,lanhopi1share,"Low access, Native Hawaiian and Other Pacific Islander population at 1 mile, share",Share of tract population that are Native Hawaiian or Other Pacific Islander beyond 1 mile from supermarket
+73,laaian1,"Low access, American Indian and Alaska Native population at 1 mile, number",American Indian or Alaska Native population count beyond 1 mile from supermarket
+74,laaian1share,"Low access, American Indian and Alaska Native population at 1 mile, share",Share of tract population that are American Indian or Alaska Native beyond 1 mile from supermarket
+75,laomultir1,"Low access, Other/Multiple race population at 1 mile, number",Other/Multiple race population count beyond 1 mile from supermarket
+76,laomultir1share,"Low access, Other/Multiple race population at 1 mile, share",Share of tract population that are Other/Multiple race beyond 1 mile from supermarket
+77,lahisp1,"Low access, Hispanic or Latino population at 1 mile, number",Hispanic or Latino ethnicity population count beyond 1 mile from supermarket
+78,lahisp1share,"Low access, Hispanic or Latino population at 1 mile, share",Share of tract population that are of Hispanic or Latino ethnicity beyond 1 mile from supermarket
+79,lahunv1,"Vehicle access, housing units without and low access at 1 mile, number",Housing units without vehicle count beyond 1 mile from supermarket
+80,lahunv1share,"Vehicle access, housing units without and low access at 1 mile, share",Share of tract housing units that are without vehicle and beyond 1 mile from supermarket
+81,lasnap1,"Low access, housing units receiving SNAP benefits at 1 mile, number",Housing units receiving SNAP benefits count beyond 1 mile from supermarket
+82,lasnap1share,"Low access, housing units receiving SNAP benefits at 1 mile, share",Share of tract housing units receiving SNAP benefits count beyond 1 mile from supermarket
+83,lapop10,"Low access, population at 10 miles, number",Population count beyond 10 miles from supermarket
+84,lapop10share,"Low access, population at 10 miles, share",Share of tract population that are beyond 10 miles from supermarket
+85,lalowi10,"Low access, low-income population at 10 miles, number",Low income population count beyond 10 miles from supermarket
+86,lalowi10share,"Low access, low-income population at 10 miles, share",Share of tract population that are low income individuals beyond 10 miles from supermarket
+87,lakids10,"Low access, children age 0-17 at 10 miles, number",Kids population count beyond 10 miles from supermarket
+88,lakids10share,"Low access, children age 0-17 at 10 miles, share",Share of tract population that are kids beyond 10 miles from supermarket
+89,laseniors10,"Low access, seniors age 65+ at 10 miles, number",Seniors population count beyond 10 miles from supermarket
+90,laseniors10share,"Low access, seniors age 65+ at 10 miles, share",Share of tract population that are seniors beyond 10 miles from supermarket
+91,lawhite10,"Low access, White population at 10 miles, number",White population count beyond 10 miles from supermarket
+92,lawhite10share,"Low access, White population at 10 miles, share",Share of tract population that are white beyond 10 miles from supermarket
+93,lablack10,"Low access, Black or African American population at 10 miles, number",Black or African American population count beyond 10 miles from supermarket
+94,lablack10share,"Low access, Black or African American population at 10 miles, share",Share of tract population that are Black or African American beyond 10 miles from supermarket
+95,laasian10,"Low access, Asian population at 10 miles, number",Asian population count beyond 10 miles from supermarket
+96,laasian10share,"Low access, Asian population at 10 miles, share",Share of tract population that are Asian beyond 10 miles from supermarket
+97,lanhopi10,"Low access, Native Hawaiian and Other Pacific Islander population at 10 miles, number",Native Hawaiian or Other Pacific Islander population count beyond 10 miles from supermarket
+98,lanhopi10share,"Low access, Native Hawaiian and Other Pacific Islander population at 10 miles, share",Share of tract population that are Native Hawaiian or Other Pacific Islander beyond 10 miles from supermarket
+99,laaian10,"Low access, American Indian and Alaska Native population at 10 miles, number",American Indian or Alaska Native population count beyond 10 miles from supermarket
+100,laaian10share,"Low access, American Indian and Alaska Native population at 10 miles, share",Share of tract population that are American Indian or Alaska Native beyond 10 miles from supermarket
+101,laomultir10,"Low access, Other/Multiple race population at 10 miles, number",Other/Multiple race population count beyond 10 miles from supermarket
+102,laomultir10share,"Low access, Other/Multiple race population at 10 miles, share",Share of tract population that are Other/Multiple race beyond 10 miles from supermarket
+103,lahisp10,"Low access, Hispanic or Latino population at 10 miles, number",Hispanic or Latino ethnicity population count beyond 10 miles from supermarket
+104,lahisp10share,"Low access, Hispanic or Latino population at 10 miles, share",Share of tract population that are of Hispanic or Latino ethnicity beyond 10 miles from supermarket
+105,lahunv10,"Vehicle access, housing units without and low access at 10 miles, number",Housing units without vehicle count beyond 10 miles from supermarket
+106,lahunv10share,"Vehicle access, housing units without and low access at 10 miles, share",Share of tract housing units that are without vehicle and beyond 10 miles from supermarket
+107,lasnap10,"Low access, housing units receiving SNAP benefits at 10 miles, number",Housing units receiving SNAP benefits count beyond 10 miles from supermarket
+108,lasnap10share,"Low access,housing units receiving SNAP benefits at 10 miles, share",Share of tract housing units receiving SNAP benefits count beyond 10 miles from supermarket
+109,lapop20,"Low access, population at 20 miles, number",Population count beyond 20 miles from supermarket
+110,lapop20share,"Low access, population at 20 miles, share",Share of tract population that are beyond 20 miles from supermarket
+111,lalowi20,"Low access, low-income population at 20 miles, number",Low income population count beyond 20 miles from supermarket
+112,lalowi20share,"Low access, low-income population at 20 miles, share",Share of tract population that are low income individuals beyond 20 miles from supermarket
+113,lakids20,"Low access, children age 0-17 at 20 miles, number",Kids population count beyond 20 miles from supermarket
+114,lakids20share,"Low access, children age 0-17 at 20 miles, share",Share of tract population that are kids beyond 20 miles from supermarket
+115,laseniors20,"Low access, seniors age 65+ at 20 miles, number",Seniors population count beyond 20 miles from supermarket
+116,laseniors20share,"Low access, seniors age 65+ at 20 miles, share",Share of tract population that are seniors beyond 20 miles from supermarket
+117,lawhite20,"Low access, White population at 20 miles, number",White population count beyond 20 miles from supermarket
+118,lawhite20share,"Low access, White population at 20 miles, share",Share of tract population that are white beyond 20 miles from supermarket
+119,lablack20,"Low access, Black or African American population at 20 miles, number",Black or African American population count beyond 20 miles from supermarket
+120,lablack20share,"Low access, Black or African American population at 20 miles, share",Share of tract population that are Black or African American beyond 20 miles from supermarket
+121,laasian20,"Low access, Asian population at 20 miles, number",Asian population count beyond 20 miles from supermarket
+122,laasian20share,"Low access, Asian population at 20 miles, share",Share of tract population that are Asian beyond 20 miles from supermarket
+123,lanhopi20,"Low access, Native Hawaiian and Other Pacific Islander population at 20 miles, number",Native Hawaiian or Other Pacific Islander population count beyond 20 miles from supermarket
+124,lanhopi20share,"Low access, Native Hawaiian and Other Pacific Islander population at 20 miles, share",Share of tract population that are Native Hawaiian or Other Pacific Islander beyond 20 miles from supermarket
+125,laaian20,"Low access, American Indian and Alaska Native population at 20 miles, number",American Indian or Alaska Native population count beyond 20 miles from supermarket
+126,laaian20share,"Low access, American Indian and Alaska Native population at 20 miles, share",Share of tract population that are American Indian or Alaska Native beyond 20 miles from supermarket
+127,laomultir20,"Low access, Other/Multiple race population at 20 miles, number",Other/Multiple race population count beyond 20 miles from supermarket
+128,laomultir20share,"Low access, Other/Multiple race population at 20 miles, share",Share of tract population that are Other/Multiple race beyond 20 miles from supermarket
+129,lahisp20,"Low access, Hispanic or Latino population at 20 miles, number",Hispanic or Latino ethnicity population count beyond 20 miles from supermarket
+130,lahisp20share,"Low access, Hispanic or Latino population at 20 miles, share",Share of tract population that are of Hispanic or Latino ethnicity beyond 20 miles from supermarket
+131,lahunv20,"Vehicle access, housing units without and low access at 20 miles, number",Housing units without vehicle count beyond 20 miles from supermarket
+132,lahunv20share,"Vehicle access, housing units without and low access at 20 miles, share",Share of tract housing units that are without vehicle and beyond 20 miles from supermarket
+133,lasnap20,"Low access, housing units receiving SNAP benefits at 20 miles, number",Housing units receiving SNAP benefits count beyond 20 miles from supermarket
+134,lasnap20share,"Low access, housing units receiving SNAP benefits at 20 miles, share",Share of tract housing units receiving SNAP benefits count beyond 20 miles from supermarket
+135,TractLOWI,"Tract low-income population, number",Total count of low-income population in tract 
+136,TractKids,"Tract children age 0-17, number",Total count of children age 0-17 in tract 
+137,TractSeniors,"Tract seniors age 65+, number",Total count of seniors age 65+ in tract 
+138,TractWhite,"Tract White population, number",Total count of White population in tract 
+139,TractBlack,"Tract Black or African American population, number",Total count of Black or African American population in tract 
+140,TractAsian,"Tract Asian population, number",Total count of Asian population in tract 
+141,TractNHOPI,"Tract Native Hawaiian and Other Pacific Islander population, number",Total count of Native Hawaiian and Other Pacific Islander population in tract 
+142,TractAIAN,"Tract American Indian and Alaska Native population, number",Total count of American Indian and Alaska Native population in tract 
+143,TractOMultir,"Tract Other/Multiple race population, number",Total count of Other/Multiple race population in tract 
+144,TractHispanic,"Tract Hispanic or Latino population, number",Total count of Hispanic or Latino population in tract 
+145,TractHUNV,"Tract housing units without a vehicle, number",Total count of housing units without a vehicle in tract 
+146,TractSNAP,"Tract housing units receiving SNAP benefits, number",Total count of housing units receiving SNAP benefits in tract 
