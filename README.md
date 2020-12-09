@@ -15,7 +15,7 @@ Flatiron Capstone Project: Develop regression models that predict food deserts a
 ## Conculsions/Next Steps
 
 ## For More Information
-Please review full analysis in the [EDA notebook](./data_collection_and_eda.ipynb), [Modeling notebook](./modeling.ipynb) and [presentation](./slide_deck.pdf).
+Please review full analysis in [EDA notebook](./data_collection_and_eda.ipynb), [Modeling notebook](./modeling.ipynb) and [presentation](./slide_deck.pdf).
 
 For any additional questions, please contact **Justin Williams - justinmorganwilliams@newschool.edu**
 
@@ -24,7 +24,7 @@ For any additional questions, please contact **Justin Williams - justinmorganwil
 ```
 ├── README.md                                    <- Top-level README for reviewers of this project
 ├── data_collection_and_eda.ipynb                <- Narrative documentation of analysis in Jupyter notebook
-├── modeling.ipynb                               <- Modeling and recommender in Jupyter notebook
+├── modeling.ipynb                               <- Modeling analysis in Jupyter notebook
 ├── slide_deck.pdf                               <- PDF version of project presentation
 ├── data                                         <- Both sourced externally and generated from code
 └── images                                       <- Both sourced externally and generated from code
