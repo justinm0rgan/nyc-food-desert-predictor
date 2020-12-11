@@ -130,3 +130,6 @@ dmypy.json
 
 # Mac OS sepcific
 .DS_store
+
+# git stuff
+.gitattributes
