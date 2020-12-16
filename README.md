@@ -8,6 +8,15 @@ Flatiron Capstone Project: Develop regression models that predict food deserts a
 
 ## Data
 
+_Low-income tract_ - A tract with either poverty rate of 20 percent or more, or a median family income less than 80 percent of surrounding metropolitan area median family income
+
+_Low-access tract_ - A tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, supercenter, or large grocery store.
+
+**Target**
+_Low-income and low-access tract measured at .5 mile Urban_ (LILAhalf) - A low-income tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, supercenter, or large grocery store.
+
+
+
 ## Methodology
 
 ## Results
