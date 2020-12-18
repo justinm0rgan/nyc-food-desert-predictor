@@ -1,14 +1,14 @@
 # NYC Food Desert Predictor
-# (Currently in process 12/9 - 1/6)
-Flatiron Capstone Project: Develop regression models that predict food deserts at a census tract level for NYC 5 boroughs
+## Flatiron Capstone Project by Justin Morgan Williams
+### December 2020
 
 ## Overview
 
-Food deserts are geographic areas where constituents have limited access to fresh, healthy and affordable foods. Typically, low-income populations face greater barriers in accessing healthy and affordable retailers, which can lead to food insecurity and higher disease rates. Crisis such as the COVID-19 pandemic can exacerbate these issues. A key finding in September 2020 report entitled [New York Food 20/20](https://static1.squarespace.com/static/572d0fcc2b8dde9e10ab59d4/t/5f7b27b9e0c3e05f19c5442f/1601906624464/ny2020-finalv2.pdf) was, desipite the public's increased food standards and awakening to the threats of diet-related diseases, the pandemic bought forth longstanding tensions between the City's actions to ensure NYC residents have both _enough_, and the _right_ foods to eat. Therefore, empasizing the salient nature of food desert's and the implications for those living within its boundaries. The data utilized was from a [United States Department of Agriculture (USDA) & Economic Research Service (ERS)](https://www.ers.usda.gov/data-products/food-access-research-atlas/) 2017 study, identifying food deserts nationally at the Census Tract (CT) level. Methods applied included subsetting NYC, exploratory data analysis (EDA) and developing a model to predict food deserts for low-income low-access CT's within 1/2 a mile of supermarkets. Results found that more vunerable populations include **low-income people of color with a higher proportion of kids (0-17) and no vehicle access**. Recomendations include _____.
+Food deserts are geographic areas where constituents have limited access to fresh, healthy and affordable foods. Typically, low-income populations face greater barriers in accessing healthy and affordable retailers, which can lead to food insecurity and higher disease rates. Crisis such as the COVID-19 pandemic can exacerbate these issues. A key finding in September 2020 report entitled [New York Food 20/20](https://static1.squarespace.com/static/572d0fcc2b8dde9e10ab59d4/t/5f7b27b9e0c3e05f19c5442f/1601906624464/ny2020-finalv2.pdf) was, desipite the public's increased food standards and awakening to the threats of diet-related diseases, the pandemic bought forth longstanding tensions between the City's actions to ensure NYC residents have both _enough_, and the _right_ foods to eat. Therefore, empasizing the salient nature of food desert's and the implications for those living within its boundaries. The data utilized comes from a [United States Department of Agriculture (USDA) & Economic Research Service (ERS)](https://www.ers.usda.gov/data-products/food-access-research-atlas/) 2017 study, identifying food deserts nationally at the Census Tract (CT) level. Methods applied include subsetting NYC, exploratory data analysis (EDA) both geospatial and otherwise, and finally developing a model to predict food deserts for low-income low-access CT's within 1/2 a mile of supermarkets. Results found that more vunerable populations include **low-income, low-access populations with increased poverty, higher proportion of kids (0-17) and no vehicle**. Recomendations and next steps include looking into incentives for supermarket expansion within the affected CT, perhaps through an already established program such as [Food Retail Expansion to Support Health (FRESH)](https://edc.nyc/program/food-retail-expansion-support-health-fresh). As well as spearheading local community urban agriculture initatives with youth involvement such as [Red Hook Farms](http://www.added-value.org/).
 
 ## Business Case
 
-Identification of food deserts at the CT level in NYC is imperative to improving food policy. Improved food policy could end food insecurity and encourage aflicted populations to chose diets rich in fresh and healthy foods. This could limit diseases of modernity thus reducing the strain on the healthcare industry which would in turn make our city more resilent to crisis such as the COVID-19 pandemic. 
+Identification of food deserts at the CT level in NYC is imperative to the improvement of food policy. Improved food policy could end food insecurity and encourage afflicted populations to chose diets rich in fresh and healthy foods. This could limit diseases of modernity thus reducing the strain on the healthcare industry which would in turn make our city more resilient to crisis such as the COVID-19 pandemic. 
 
 ## Data
 
@@ -22,7 +22,7 @@ USDA dataset included multiple _flag for food desert_ binary columns. This study
 
 The aforementioned inform the _target_ variable of:
 
-**Low-income and low-access tract measured at .5 mile Urban** (LILATracts_halfAnd10) - A low-income tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, supercenter, or large grocery store.
+**Low-income and low-access tract measured at .5 mile** (LILATracts_halfAnd10) - A low-income tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, supercenter, or large grocery store.
 
 Specific columns and their respective definitions are specified below:
 
@@ -89,34 +89,46 @@ Specific columns and their respective definitions are specified below:
 
 ## Methodology
 
-After subtantial data cleaning and merging of dataset with geospatial shapefiles, basic EDA was employed. Boxplots informed many numeric features were riddled with outliers, however the decision was consiously made to leave them be, as outliers were important to this study. For instance, if white population was extremely lwo in a CT that was flagged as a food desert, we would want to know that. Geospatial analysis was extensively used to overlay positive target CT's to be on many important features choropleth maps. Features were engineered that allowed better visual analysis of dataset, however aspects such as polynomials were avoided due to a desire to provide an easily interpreted model. 
+After substantial data cleaning and merging with 2010 CT geospatial shapefiles, basic EDA was employed. Boxplots showed many numeric features were riddled with outliers, however the decision was made to leave them be, as outliers are integral to this study. For instance, many columns dealing with low-access demographical subsets of the population are by definition outliers, to impute them as otherwise would simply erase their significance.  Geospatial analysis was used extemsively to geographically visualize important features and their inherenet relationships. Features were engineered that allowed better visual analysis of dataset, however aspects such as polynomials were avoided due to a desire to provide an easily interpretable model. 
 
-After EDA the cleaned dataset was bought into the modeling notebook, and all boolean classification columns that could lead to data leakage were dropped. Various models were employed, firstly Logistic Regression which was then improved upon with Recursive Feature Elimination. Next Decision Tree Classifier was employed and concluded in similiar results. The best model by far, ended up being and XGBoost model that was tuned to account for the great deal of class imblanace. 
+After EDA the cleaned dataset was bought into the modeling notebook, and all boolean classification columns that could lead to data leakage were dropped. Various models were employed, firstly Logistic Regression with all features and subsequently a trimmed down version with Recursive Feature Elimination. Next, Decision Tree Classifier was employed and concluded in similiar results. The best model which had a balanced Recall and F1 score, ended up being XGBoost model that was tuned to account for class imblanace by calculating the positve scale rate. 
 
 ## Results
 
-Key results included____.
+Final model results indicate feature importance such that:
+- Median Family Income and Poverty Rate have the most weight
+- Racial demographics do not have as much bearing as suspected
+- Having kids with low-access and no vehicle are significant contributors to food deserts
+- Overall low-access and low-income are the primary indicators of a food desert.
 
-**F1**
+<u>**XGBoost**</u>
 
-**Recall**
+**Recall** = .71 
 
-***
-Questions to consider:
-* How do you interpret the results?
-* How confident are you that your results would generalize beyond the data you have?
-***
+**F1** = .66
+
+**XGBoost Confusion Matrix**
+![XGBoost Confusion Matrix](./images/xg_boost_con_matrix.png)
+
+Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imabalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Pecision and Recall, thus providing a more harmonic metric.  
 
 ### Binary Target 
 ![Binary Target](./images/binary_target.png)
 
-<u>Observations</u>
+High class imbalance with:
+
 - 2165 CT
 - 2134 not food deserts (0)
     - 25 N/A (parks etc)
 - 31 food deserts (1)
 
+## Geographic distirbution
+![Geospatial Distribution](./images/map_target.png)
+![County Rate](./images/food_desert_rate_county.png)
 
+<u>Observations</u>
+- No CT flagged for food desert in Manhattan
+- Although most frequent in Kings and Queens counties, highest proportion in Richmond
 
 ### Whitie per CT with Food Deserts
 ![graph1](./images/food_deserts,_white_per_census_tract.png)
@@ -124,34 +136,47 @@ Questions to consider:
 <u>Observations</u>
 - Most food deserts in areas with low rate of white population
 
-### Geospatial (kids)
-![graph1](./images/viz1.png)
+### Median Income vs. Poverty Rate
+![Median Income/Poverty Rate](./images/income_pov_rate.png)
 
 <u>Observations</u>
-- TBA
-
-### Vehicle Access (maybe something other then geospatial?)
-![graph1](./images/viz1.png)
-
-<u>Observations</u>
-- TBA
+- Highly negatively correlated features suggesting more significant weights in modeling
 
 ### Final Model
 ![graph1](./images/xg_boost_features.png)
 
-<u>Observations</u>
-- TBA
+Our final model is XG Boost. 
 
-## Conculsions/Next Steps
+Top 10 most important features are as follows:
 
-Provide your conclusions about the work you've done, including any limitations or next steps.
+1) `MedianFamilyIncome` - Median family income
 
-***
-Questions to consider:
-* What would you recommend the business do as a result of this work?
-* What are some reasons why your analysis might not fully solve the business problem?
-* What else could you do in the future to improve this project?
-***
+2) `PovertyRate` - Poverty rate
+
+3) `lakidshalfshare` - Low-access kids .5m share
+
+4) `lahunvhalfshare` - Low-acces households no vehicle .5m share
+
+5) `lalowihalfshare` - Low-access low-income .5m share
+
+6) `lakidsahalf` - Low-access kids .5m
+
+7) `lablackhalfshare` - Low-access black .5m share
+
+8) `rateTractoMultir` - Tract rate Multi-Race
+
+9) `lamultifhalfshare` - Low-access Multi-Race .5m share
+
+10) `rateTractLOWI` - Tract rate low-income
+
+<u>Model Observations</u>
+
+Income and Poverty being the most weighted features in this final model, indicate food deserts are yet another societal consequence of a system of inequities. Such that distiribution of wealth and services is disproportionatley given to a segment of the population whilst the poor are left to fend for themselves. The attributes dealing with low-access all suggest supermarket location is at the heart of this issue and therefore would benefit from expansion in those areas. However, 3 of the top 10 weighted features do highlight some aspect of racial inequity suggesting that communities of color have a higher likelihood of living within a food desert. 
+
+## Conclusions/Next Steps
+These ‘wicked’ issues such as _income_ and _poverty_  are outside the scope of this study. However, low-access to fresh, healthy and affordable supermarkets because of proximity or lack of vehicle access, could be remedied by offering incentives for expansion within the afflicted CT.
+
+Next steps include looking into incentives for supermarket expansion within the affected CT, perhaps through an already established program such as [Food Retail Expansion to Support Health (FRESH)](https://edc.nyc/program/food-retail-expansion-support-health-fresh). As well as spearheading local community urban agriculture initatives with youth involvement such as [Red Hook Farms](http://www.added-value.org/).
 
 ## For More Information
 Please review full analysis in [EDA notebook](./eda.ipynb), [Modeling notebook](./modeling.ipynb) and [presentation](./slide_deck.pdf).

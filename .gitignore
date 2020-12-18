@@ -133,3 +133,4 @@ dmypy.json
 
 # git stuff
 .gitattributes
+/data/*
