@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-'''This file contains functions utilized in the NYC Food Desert Predictor capstone 
-project for Flatiron School'''
+'''This file contains general functions utilized in more then one notebook in the NYC Food Desert Predictor 
+capstone project for Flatiron School'''
 
 # import built in modules
 import pandas as pd
@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
 # set directory
-PROJECT_DIR = "."
+PROJECT_DIR = ".."
 IMAGES_PATH = os.path.join(PROJECT_DIR, 'images')
 os.makedirs(IMAGES_PATH, exist_ok=True)
 
@@ -31,3 +31,5 @@ def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=250):
         plt.tight_layout()
     plt.savefig(path, format=fig_extension, dpi=resolution)
 
+if __name__ == '__main__':
+    _test()
