@@ -14,9 +14,9 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
 # set directory
-# PROJECT_DIR = "."
-# IMAGES_PATH = os.path.join(PROJECT_DIR, 'images')
-# os.makedirs(IMAGES_PATH, exist_ok=True)
+PROJECT_DIR = "."
+IMAGES_PATH = os.path.join(PROJECT_DIR, 'images')
+os.makedirs(IMAGES_PATH, exist_ok=True)
 
 # functions start here
 
@@ -25,9 +25,6 @@ def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=250):
     '''Function that saves visual as png at a specified resolution
     Enter fig_id to specify what you would like your figure to be called.
     Other paremeters have default values and can be altered if needed'''
-    # PROJECT_DIR = "."
-    # IMAGES_PATH = os.path.join(PROJECT_DIR, 'images')
-    # os.makedirs(IMAGES_PATH, exist_ok=True)
     path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
     print("Saving figure", fig_id)
     if tight_layout:
