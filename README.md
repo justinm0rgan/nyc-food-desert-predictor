@@ -91,7 +91,39 @@ Specific columns and their respective definitions are specified below:
 
 After substantial data cleaning and merging with 2010 CT geospatial shapefiles, basic EDA was employed. Boxplots showed many numeric features were riddled with outliers, however the decision was made to leave them be, as outliers are integral to this study. For instance, many columns dealing with low-access demographic subsets of the population are by definition outliers, to impute them as otherwise would simply erase their significance.  Geospatial analysis was used extensively to geographically visualize important features and their inherent relationships. Features were engineered that allowed better visual analysis of dataset, however aspects such as polynomials were avoided due to a desire to provide an easily interpretable model. 
 
-After EDA the cleaned dataset was bought into the modeling notebook, and all boolean classification columns that could lead to data leakage were dropped. Various models were employed, firstly Logistic Regression with all features and subsequently a trimmed down version with Recursive Feature Elimination. Next, Decision Tree Classifier was employed and concluded in similar results. The best model which had a balanced Recall and F1 score, ended up being XGBoost model that was tuned to account for class imbalance by calculating the positive scale rate. 
+After EDA the cleaned dataset was bought into the modeling notebook, and all boolean classification columns that could lead to data leakage were dropped. Various models were employed, firstly Logistic Regression with all features and subsequently a trimmed down version with Recursive Feature Elimination. Next, Decision Tree Classifier was employed and concluded in similar results. The best model which had a balanced Recall and F1 score, ended up being XGBoost model that was tuned to account for class imbalance by calculating the positive scale rate.   
+
+## EDA Visualizations
+
+### Binary Target 
+![Binary Target](./images/binary_target.png)
+
+High class imbalance with:
+
+- 2165 CT
+- 2134 not food deserts (0)
+    - 25 N/A (parks etc)
+- 31 food deserts (1)
+
+## Geographic distribution
+![Geospatial Distribution](./images/map_target.png)
+![County Rate](./images/food_desert_rate_county.png)
+
+<u>Observations</u>
+- No CT flagged for food desert in Manhattan
+- Although most frequent in Kings and Queens counties, highest proportion in Richmond
+
+### White per CT with Food Deserts
+![graph1](./images/food_deserts,_white_per_census_tract.png)
+
+<u>Observations</u>
+- Most food deserts in areas with low rate of white population
+
+### Median Income vs. Poverty Rate
+![Median Income/Poverty Rate](./images/income_pov_rate.png)
+
+<u>Observations</u>
+- Highly negatively correlated features suggesting more significant weights in modeling
 
 ## Results
 
@@ -110,37 +142,7 @@ Final model results indicate feature importance such that:
 **XGBoost Confusion Matrix**
 ![XGBoost Confusion Matrix](./images/xg_boost_con_matrix.png)
 
-Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imbalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Precision and Recall, thus providing a more harmonic metric.  
-
-### Binary Target 
-![Binary Target](./images/binary_target.png)
-
-High class imbalance with:
-
-- 2165 CT
-- 2134 not food deserts (0)
-    - 25 N/A (parks etc)
-- 31 food deserts (1)
-
-## Geographic distirbution
-![Geospatial Distribution](./images/map_target.png)
-![County Rate](./images/food_desert_rate_county.png)
-
-<u>Observations</u>
-- No CT flagged for food desert in Manhattan
-- Although most frequent in Kings and Queens counties, highest proportion in Richmond
-
-### Whitie per CT with Food Deserts
-![graph1](./images/food_deserts,_white_per_census_tract.png)
-
-<u>Observations</u>
-- Most food deserts in areas with low rate of white population
-
-### Median Income vs. Poverty Rate
-![Median Income/Poverty Rate](./images/income_pov_rate.png)
-
-<u>Observations</u>
-- Highly negatively correlated features suggesting more significant weights in modeling
+Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imbalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Precision and Recall, thus providing a more harmonic metric.
 
 ### Final Model
 ![graph1](./images/xg_boost_features.png)
