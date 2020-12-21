@@ -4,7 +4,7 @@
 
 ## Overview
 
-Food deserts are geographic areas where constituents have limited access to fresh, healthy and affordable foods. Typically, low-income populations face greater barriers in accessing healthy and affordable retailers, which can lead to food insecurity and higher disease rates. Crisis such as the COVID-19 pandemic can exacerbate these issues. A key finding in September 2020 report entitled [New York Food 20/20](https://static1.squarespace.com/static/572d0fcc2b8dde9e10ab59d4/t/5f7b27b9e0c3e05f19c5442f/1601906624464/ny2020-finalv2.pdf) was, desipite the public's increased food standards and awakening to the threats of diet-related diseases, the pandemic bought forth longstanding tensions between the City's actions to ensure NYC residents have both _enough_, and the _right_ foods to eat. Therefore, empasizing the salient nature of food desert's and the implications for those living within its boundaries. The data utilized comes from a [United States Department of Agriculture (USDA) & Economic Research Service (ERS)](https://www.ers.usda.gov/data-products/food-access-research-atlas/) 2017 study, identifying food deserts nationally at the Census Tract (CT) level. Methods applied include subsetting NYC, exploratory data analysis (EDA) both geospatial and otherwise, and finally developing a model to predict food deserts for low-income low-access CT's within 1/2 a mile of supermarkets. Results found that more vunerable populations include **low-income, low-access populations with increased poverty, higher proportion of kids (0-17) and no vehicle**. Recomendations and next steps include looking into incentives for supermarket expansion within the affected CT, perhaps through an already established program such as [Food Retail Expansion to Support Health (FRESH)](https://edc.nyc/program/food-retail-expansion-support-health-fresh). As well as spearheading local community urban agriculture initatives with youth involvement such as [Red Hook Farms](http://www.added-value.org/).
+Food deserts are geographic areas where constituents have limited access to fresh, healthy and affordable foods. Typically, low-income populations face greater barriers in accessing healthy and affordable retailers, which can lead to food insecurity and higher disease rates. Crisis such as the COVID-19 pandemic can exacerbate these issues. A key finding in September 2020 report entitled [New York Food 20/20](https://static1.squarespace.com/static/572d0fcc2b8dde9e10ab59d4/t/5f7b27b9e0c3e05f19c5442f/1601906624464/ny2020-finalv2.pdf) was, despite the public's increased food standards and awakening to the threats of diet-related diseases, the pandemic bought forth longstanding tensions between the City's actions to ensure NYC residents have both _enough_, and the _right_ foods to eat. Therefore, emphasizing the salient nature of food desert's and the implications for those living within its boundaries. The data utilized comes from a [United States Department of Agriculture (USDA) & Economic Research Service (ERS)](https://www.ers.usda.gov/data-products/food-access-research-atlas/) 2017 study, identifying food deserts nationally at the Census Tract (CT) level. Methods applied include sub-setting NYC, exploratory data analysis (EDA) both geospatial and otherwise, and finally developing a model to predict food deserts for low-income low-access CT's within 1/2 a mile of supermarkets. Results found that more vulnerable populations include **low-income, low-access populations with increased poverty, higher proportion of kids (0-17) and no vehicle**. Recommendations and next steps include looking into incentives for supermarket expansion within the affected CT, perhaps through an already established program such as [Food Retail Expansion to Support Health (FRESH)](https://edc.nyc/program/food-retail-expansion-support-health-fresh). As well as spearheading local community urban agriculture initiatives with youth involvement such as [Red Hook Farms](http://www.added-value.org/).
 
 ## Business Case
 
@@ -14,15 +14,15 @@ Identification of food deserts at the CT level in NYC is imperative to the impro
 
 The data used for this project came mostly from the USDA ERS _Food Research Atlas_ study. Additional 2010 CT geospatial data was obtained from [NYC OpenData](https://data.cityofnewyork.us/City-Government/2010-Census-Tracts/fxpq-c8ku) and merged with the USDA dataset to perform various geospatial visuals. 
 
-USDA dataset included multiple _flag for food desert_ binary columns. This study was solely focused on low-access 1/2 mile from supermarkets, subsequently, many columns were dropped. The target variable was a combination of two vriables
+USDA dataset included multiple _flag for food desert_ binary columns. This study was solely focused on low-access 1/2 mile from supermarkets, subsequently, many columns were dropped. The target variable was a combination of two variables
 
 **Low-income tract** - A tract with either poverty rate of 20 percent or more, or a median family income less than 80 percent of surrounding metropolitan area median family income
 
-**Low-access tract** - A tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, supercenter, or large grocery store.
+**Low-access tract** - A tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, super-center, or large grocery store.
 
 The aforementioned inform the _target_ variable of:
 
-**Low-income and low-access tract measured at .5 mile** (LILATracts_halfAnd10) - A low-income tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, supercenter, or large grocery store.
+**Low-income and low-access tract measured at .5 mile** (LILATracts_halfAnd10) - A low-income tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, super-center, or large grocery store.
 
 Specific columns and their respective definitions are specified below:
 
@@ -37,7 +37,7 @@ Specific columns and their respective definitions are specified below:
 | 6  | GroupQuartersFlag    | Group quarters, tract with high share                                                                        | Flag for tract where >=67%                                                                                                                                                                                                        |
 | 7  | NUMGQTRS             | Group quarters, tract population residing in, number                                                         | Count of tract population residing in group quarters                                                                                                                                                                              |
 | 8  | PCTGQTRS             | Group quarters, tract population residing in, share                                                          | Percent of tract population residing in group quarters                                                                                                                                                                            |
-| 9  | LILATracts_halfAnd10 | Low income and low access tract measured at 1/2 mile for urban areas and 10 miles for rural areas            | Flag for food desert when considering low accessibilty at 1/2 and 10 miles                                                                                                                                                        |
+| 9  | LILATracts_halfAnd10 | Low income and low access tract measured at 1/2 mile for urban areas and 10 miles for rural areas            | Flag for food desert when considering low accessibility at 1/2 and 10 miles                                                                                                                                                        |
 | 10 | LILATracts_Vehicle   | Low income and low access tract using vehicle access or low income and low access tract measured at 20 miles | Flag for food desert when considering vehicle access or at 20 miles                                                                                                                                                               |
 | 11 | HUNVFlag             | Vehicle access, tract with low vehicle access                                                                | Flag for tract where >= 100 of households do not have a vehicle, and beyond 1/2 mile from supermarket                                                                                                                             |
 | 12 | LowIncomeTracts      | Low income tract                                                                                             | Flag for low income tract                                                                                                                                                                                                         |
@@ -89,9 +89,9 @@ Specific columns and their respective definitions are specified below:
 
 ## Methodology
 
-After substantial data cleaning and merging with 2010 CT geospatial shapefiles, basic EDA was employed. Boxplots showed many numeric features were riddled with outliers, however the decision was made to leave them be, as outliers are integral to this study. For instance, many columns dealing with low-access demographical subsets of the population are by definition outliers, to impute them as otherwise would simply erase their significance.  Geospatial analysis was used extemsively to geographically visualize important features and their inherenet relationships. Features were engineered that allowed better visual analysis of dataset, however aspects such as polynomials were avoided due to a desire to provide an easily interpretable model. 
+After substantial data cleaning and merging with 2010 CT geospatial shapefiles, basic EDA was employed. Boxplots showed many numeric features were riddled with outliers, however the decision was made to leave them be, as outliers are integral to this study. For instance, many columns dealing with low-access demographic subsets of the population are by definition outliers, to impute them as otherwise would simply erase their significance.  Geospatial analysis was used extensively to geographically visualize important features and their inherent relationships. Features were engineered that allowed better visual analysis of dataset, however aspects such as polynomials were avoided due to a desire to provide an easily interpretable model. 
 
-After EDA the cleaned dataset was bought into the modeling notebook, and all boolean classification columns that could lead to data leakage were dropped. Various models were employed, firstly Logistic Regression with all features and subsequently a trimmed down version with Recursive Feature Elimination. Next, Decision Tree Classifier was employed and concluded in similiar results. The best model which had a balanced Recall and F1 score, ended up being XGBoost model that was tuned to account for class imblanace by calculating the positve scale rate. 
+After EDA the cleaned dataset was bought into the modeling notebook, and all boolean classification columns that could lead to data leakage were dropped. Various models were employed, firstly Logistic Regression with all features and subsequently a trimmed down version with Recursive Feature Elimination. Next, Decision Tree Classifier was employed and concluded in similar results. The best model which had a balanced Recall and F1 score, ended up being XGBoost model that was tuned to account for class imbalance by calculating the positive scale rate. 
 
 ## Results
 
@@ -110,7 +110,7 @@ Final model results indicate feature importance such that:
 **XGBoost Confusion Matrix**
 ![XGBoost Confusion Matrix](./images/xg_boost_con_matrix.png)
 
-Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imabalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Pecision and Recall, thus providing a more harmonic metric.  
+Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imbalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Precision and Recall, thus providing a more harmonic metric.  
 
 ### Binary Target 
 ![Binary Target](./images/binary_target.png)
@@ -155,7 +155,7 @@ Top 10 most important features are as follows:
 
 3) `lakidshalfshare` - Low-access kids .5m share
 
-4) `lahunvhalfshare` - Low-acces households no vehicle .5m share
+4) `lahunvhalfshare` - Low-access households no vehicle .5m share
 
 5) `lalowihalfshare` - Low-access low-income .5m share
 
@@ -171,12 +171,12 @@ Top 10 most important features are as follows:
 
 <u>Model Observations</u>
 
-Income and Poverty being the most weighted features in this final model, indicate food deserts are yet another societal consequence of a system of inequities. Such that distiribution of wealth and services is disproportionatley given to a segment of the population whilst the poor are left to fend for themselves. The attributes dealing with low-access all suggest supermarket location is at the heart of this issue and therefore would benefit from expansion in those areas. However, 3 of the top 10 weighted features do highlight some aspect of racial inequity suggesting that communities of color have a higher likelihood of living within a food desert. 
+Income and Poverty being the most weighted features in this final model, indicate food deserts are yet another societal consequence of a system of inequities. Such that distribution of wealth and services is disproportionately given to a segment of the population whilst the poor are left to fend for themselves. The attributes dealing with low-access all suggest supermarket location is at the heart of this issue and therefore would benefit from expansion in those areas. However, 3 of the top 10 weighted features do highlight some aspect of racial inequity suggesting that communities of color have a higher likelihood of living within a food desert. 
 
 ## Conclusions/Next Steps
 These ‘wicked’ issues such as _income_ and _poverty_  are outside the scope of this study. However, low-access to fresh, healthy and affordable supermarkets because of proximity or lack of vehicle access, could be remedied by offering incentives for expansion within the afflicted CT.
 
-Next steps include looking into incentives for supermarket expansion within the affected CT, perhaps through an already established program such as [Food Retail Expansion to Support Health (FRESH)](https://edc.nyc/program/food-retail-expansion-support-health-fresh). As well as spearheading local community urban agriculture initatives with youth involvement such as [Red Hook Farms](http://www.added-value.org/).
+Next steps include looking into incentives for supermarket expansion within the affected CT, perhaps through an already established program such as [Food Retail Expansion to Support Health (FRESH)](https://edc.nyc/program/food-retail-expansion-support-health-fresh). As well as spearheading local community urban agriculture initiatives with youth involvement such as [Red Hook Farms](http://www.added-value.org/).
 
 ## For More Information
 Please review full analysis in [EDA notebook](./eda.ipynb), [Modeling notebook](./modeling.ipynb) and [presentation](./slide_deck.pdf).
