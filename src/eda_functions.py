@@ -146,5 +146,29 @@ def create_choropleth_map_points(df1, df2, col1, col2, cmap, title, ptcolor, vma
     save_fig(title.lower().replace(' ', '_'))
     plt.show()
 
+# function for creating lmplot
+def lmplot(data, x, y, xlabel, ylabel, title, height=12, aspect=1, theme='poster', target='LILATracts_halfAnd10',\
+          style='darkgrid'):
+    '''Creates lmplot to comepare two variables vs the target 
+    Enter dataframe, x, y, xlabel, ylabel, title.
+    Height and aspect have default values
+    Seaborn theme default poster, theme to darkgrid
+    Target default to LILATracts_halfAnd10'''
+    sns.set_style(style)
+    sns.set_theme(theme)
+    sns.lmplot(x=x, 
+               y=y,  
+               data=data,
+              height=12,
+              aspect=1,
+               legend_out=False,
+              hue=target)\
+        .set(ylabel=ylabel, 
+             xlabel=xlabel, 
+             title=title)\
+        ._legend.set_title('Target')
+    save_fig(title.lower().replace(' ', '_'))
+    plt.show();
+
 if __name__ == '__main__':
     _test()
