@@ -204,7 +204,7 @@ These ‘wicked’ issues such as _income_ and _poverty_  are outside the scope 
 Next steps include looking into incentives for supermarket expansion within the affected CT, perhaps through an already established program such as [Food Retail Expansion to Support Health (FRESH)](https://edc.nyc/program/food-retail-expansion-support-health-fresh). As well as spearheading local community urban agriculture initiatives with youth involvement such as [Red Hook Farms](http://www.added-value.org/).
 
 ## For More Information
-Please review full analysis in [EDA notebook](./eda.ipynb), [Modeling notebook](./modeling.ipynb) and [presentation](./slide_deck.pdf).
+Please review full analysis in [EDA notebook](./notebooks/eda.ipynb), [Modeling notebook](./notebooks/modeling.ipynb) and [presentation](./slide_deck.pdf).
 
 For any additional questions, please contact **Justin Williams - justinmorganwilliams@newschool.edu**
 
