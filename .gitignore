@@ -134,3 +134,6 @@ dmypy.json
 # git stuff
 .gitattributes
 /data/*
+
+#API keys
+config.py
