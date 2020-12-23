@@ -109,7 +109,7 @@ High class imbalance with:
 
 ## Geographic distribution
 ![Geospatial Distribution](./images/map_target.png)
-<img src="./images/food_desert_rate_county.png" width="875" height="875" />
+<img src="./images/food_desert_rate_county.png" width="1000" height="1000" />
 
 <u>Observations</u>
 - No CT flagged for food desert in Manhattan
@@ -133,7 +133,7 @@ High class imbalance with:
 - Some food deserts in areas with high rate of latinx population
 
 ### Median Income vs. Poverty Rate
-<img src="./images/income_pov_rate.png" width="875" height="875" />
+<img src="./images/income_pov_rate.png" width="1000" height="1000" />
 
 <u>Observations</u>
 - Highly negatively correlated features suggesting more significant weights in modeling
@@ -153,7 +153,7 @@ Final model results indicate feature importance such that:
 **F1** = .66
 
 **XGBoost Confusion Matrix**
-<img src="./images/xg_boost_con_matrix.png" width="1000" height="850" />
+<img src="./images/xg_boost_con_matrix.png" width="1000" height="833" />
 
 Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imbalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Precision and Recall, thus providing a more harmonic metric.
 
