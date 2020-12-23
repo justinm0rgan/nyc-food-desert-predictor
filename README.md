@@ -157,6 +157,16 @@ Final model results indicate feature importance such that:
 
 Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imbalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Precision and Recall, thus providing a more harmonic metric.
 
+### Geospatial depictions of Model Predictions
+<img src="./images/model_predictions.png" />
+
+Model predicted 13 values as True and 2157 as False.
+- True Positive - 10 Olive CT are those that were predicted corectly 
+- False Postive - 3 yellow CT that were incorrectly predicted as positve
+- Food Desert - 31 black CT that are positive labels from the original dataset
+- Not Food Desert - purple CT that are negative labels from the original dataset
+- Missing Values - lightgrey CT that do not have values i.e. parks, cemetaries etc...
+
 ### Final Model
 <img src="./images/xg_boost_features.png" width="850" height="675" />
 
