@@ -98,7 +98,7 @@ After EDA the cleaned dataset was bought into the modeling notebook, and all boo
 ## EDA Visualizations
 
 ### Binary Target 
-![Binary Target](./images/binary_target.png)
+<img src="./images/binary_target.png" width="666" height="750" />
 
 High class imbalance with:
 
@@ -109,20 +109,31 @@ High class imbalance with:
 
 ## Geographic distribution
 ![Geospatial Distribution](./images/map_target.png)
-![County Rate](./images/food_desert_rate_county.png)
+<img src="./images/food_desert_rate_county.png" width="875" height="875" />
 
 <u>Observations</u>
 - No CT flagged for food desert in Manhattan
 - Although most frequent in Kings and Queens counties, highest proportion in Richmond
 
 ### White per CT with Food Deserts
-![graph1](./images/food_deserts,_white_per_census_tract.png)
+![white per ct](./images/white_per_census_tract_&_food_deserts.png)
+
+### Black per CT with Food Deserts
+![black per ct](./images/black_per_census_tract_&_food_deserts.png)
+
+### Latinx per CT with Food Deserts
+![latinx per ct](./images/latinx_per_census_tract_&_food_deserts.png)
+
+### Asian per CT with Food Deserts
+![asian per ct](./images/asian_per_census_tract_&_food_deserts.png)
 
 <u>Observations</u>
-- Most food deserts in areas with low rate of white population
+- Most food deserts in areas with low rate of white and asian populations
+- Most food deserts in areas with high rate of black population
+- Some food deserts in areas with high rate of latinx population
 
 ### Median Income vs. Poverty Rate
-![Median Income/Poverty Rate](./images/income_pov_rate.png)
+<img src="./images/income_pov_rate.png" width="875" height="875" />
 
 <u>Observations</u>
 - Highly negatively correlated features suggesting more significant weights in modeling
@@ -147,7 +158,7 @@ Final model results indicate feature importance such that:
 Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imbalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Precision and Recall, thus providing a more harmonic metric.
 
 ### Final Model
-![graph1](./images/xg_boost_features.png)
+![XGBoost feature importance](./images/xg_boost_features.png)
 
 Our final model is XG Boost. 
 
@@ -191,11 +202,12 @@ For any additional questions, please contact **Justin Williams - justinmorganwil
 
 ```
 ├── README.md                                    <- Top-level README for reviewers of this project
-├── data_cleaning.ipynb                          <- Data cleaning in Jupyter notebook
-├── eda.ipynb                                    <- Exploratory data analysis in Jupyter notebook
-├── modeling.ipynb                               <- Modeling analysis in Jupyter notebook
+├── notebooks
+│   ├── data_cleaning.ipynb                          <- Data cleaning in Jupyter notebook
+│   ├── eda.ipynb                                    <- Exploratory data analysis in Jupyter notebook
+│   ├── modeling.ipynb                               <- Modeling analysis in Jupyter notebook
 ├── slide_deck.pdf                               <- PDF version of project presentation
-├── data                                         <- Both sourced externally and generated from code
+├── src                                          <- Functions to be imported into Jupyter Notebooks
 └── images                                       <- Both sourced externally and generated from code
 ```
 
