@@ -153,12 +153,12 @@ Final model results indicate feature importance such that:
 **F1** = .66
 
 **XGBoost Confusion Matrix**
-![XGBoost Confusion Matrix](./images/xg_boost_con_matrix.png)
+<img src="./images/xg_boost_con_matrix.png" width="1000" height="850" />
 
 Chose Recall as primary metric in order to reduce False Negatives, such that we don't want to classify a CT as not a _'food desert'_ when it is one. Being that there is such a high degree of class imbalance we want to ensure all food deserts are classified as such. F1 was chosen as a secondary metric due its ability to give a better balance between Precision and Recall, thus providing a more harmonic metric.
 
 ### Final Model
-![XGBoost feature importance](./images/xg_boost_features.png)
+<img src="./images/xg_boost_features.png" width="850" height="675" />
 
 Our final model is XG Boost. 
 
@@ -184,7 +184,7 @@ Top 10 most important features are as follows:
 
 10) `rateTractLOWI` - Tract rate low-income
 
-<u>Model Observations</u>
+<u> Model Observations </u>
 
 Income and Poverty being the most weighted features in this final model, indicate food deserts are yet another societal consequence of a system of inequities. Such that distribution of wealth and services is disproportionately given to a segment of the population whilst the poor are left to fend for themselves. The attributes dealing with low-access all suggest supermarket location is at the heart of this issue and therefore would benefit from expansion in those areas. However, 3 of the top 10 weighted features do highlight some aspect of racial inequity suggesting that communities of color have a higher likelihood of living within a food desert. 
 
