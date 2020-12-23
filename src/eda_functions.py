@@ -55,18 +55,25 @@ def create_choropleth_map(df, col, color_map, title, vmax=1):
                             vmax=vmax,
                             edgecolor='face',
                             legend=True,
-                            legend_kwds={'shrink': 0.7})
+                            legend_kwds={'shrink': 0.7},
+                            missing_kwds={
+                                "color": "lightgrey",
+                            })
 
 
     # figure has two axes, cb is 2nd
     cb = fig.axes[1]
 
     # # set params for cb
-    cb.tick_params(labelsize=40,
+    cb.tick_params(labelsize=60,
                       direction='out', 
                       length=6, 
                       width=2,
                       grid_alpha=1)
+
+    # add annotation
+    ax.annotate("•", xy=(0.80, .855), size=100, xycoords='figure fraction', color='lightgrey')
+    ax.annotate("Missing Values", xy=(0.82, .86), size=70, xycoords='figure fraction')
 
     # set map title
     ax.set_title(title, fontdict={'fontsize': 70}, loc='center')
@@ -76,7 +83,7 @@ def create_choropleth_map(df, col, color_map, title, vmax=1):
     ax.set_axis_off()
 
     # save map
-    save_fig(title.lower().replace(' ', '_'))
+    save_fig(title.lower().replace(' ', '_'), transparent=True)
     plt.show()
 
 
@@ -143,7 +150,7 @@ def create_choropleth_map_points(df1, df2, col1, col2, cmap, title, ptcolor, vma
     ax.set_axis_off()
 
     # save map
-    save_fig(title.lower().replace(' ', '_'))
+    save_fig(title.lower().replace(' ', '_'), transparent=True)
     plt.show()
 
 # function for creating lmplot

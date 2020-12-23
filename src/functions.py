@@ -21,7 +21,7 @@ os.makedirs(IMAGES_PATH, exist_ok=True)
 # functions start here
 
 # function for saving figures
-def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=250):
+def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=250, transparent=False):
     '''Function that saves visual as png at a specified resolution
     Enter fig_id to specify what you would like your figure to be called.
     Other paremeters have default values and can be altered if needed'''
@@ -29,7 +29,7 @@ def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=250):
     print("Saving figure", fig_id)
     if tight_layout:
         plt.tight_layout()
-    plt.savefig(path, format=fig_extension, dpi=resolution)
+    plt.savefig(path, format=fig_extension, dpi=resolution, transparent=transparent)
 
 if __name__ == '__main__':
     _test()

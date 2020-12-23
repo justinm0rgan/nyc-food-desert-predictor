@@ -37,7 +37,7 @@ def get_model_scores(model, y_train, y_train_pred, y_test, y_test_pred, ):
     Returns modeling scores printed out in a consistent format'''
     print('\033[1m' + 'Below are the scoring metrics for {} model'.format(model) + '\033[0m')
     print('\n')
-print('Train {} Accuracy: {}'.format(model, metrics.accuracy_score(y_train, y_train_pred)))
+    print('Train {} Accuracy: {}'.format(model, metrics.accuracy_score(y_train, y_train_pred)))
     print('Test {} Accuracy: {}'.format(model, metrics.accuracy_score(y_test, y_test_pred)))
     print('\n')
     print('Train {} F1: {}'.format(model, metrics.f1_score(y_train,y_train_pred)))
@@ -50,15 +50,18 @@ print('Train {} Accuracy: {}'.format(model, metrics.accuracy_score(y_train, y_tr
     print('Test {} Precision: {}'.format(model, metrics.precision_score(y_test, y_test_pred)))
 
 # function for plotting confusion matrix
-def confusion_matrix(estimator, X, y, title, display_labels=['Not Food Desert', 'Food Desert']):
+def confusion_matrix(estimator, X, y, title, display_labels=['Not Food Desert', 'Food Desert'],\
+    normalize='all'):
     '''Function that plots confusion matrix for model
-    Enter estimator, X, y, cmap
-    Display labels and font have defaults but can be altered'''
+    Enter estimator, X, y
+    Display labels and normalize have defaults but can be altered'''
     fig, ax = fig, ax = plt.subplots(figsize=(12, 10))
+    plt.rcParams.update({'font.size': 16})
     metrics.plot_confusion_matrix(estimator, X, y, 
                               cmap=plt.cm.Blues, 
                               display_labels=display_labels, 
-                              ax=ax)
+                              ax=ax,
+                              normalize='all')
     ax.set_ylabel('True', fontdict={'fontsize':18})
     ax.set_xlabel('Predicted', fontdict={'fontsize':18})
     ax.tick_params(axis='both', which='major', labelsize=16)
