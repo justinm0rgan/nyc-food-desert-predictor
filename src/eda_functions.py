@@ -174,7 +174,7 @@ def lmplot(data, x, y, xlabel, ylabel, title, height=12, aspect=1, theme='poster
              xlabel=xlabel, 
              title=title)\
         ._legend.set_title('Target')
-    save_fig(title.lower().replace(' ', '_'))
+    save_fig(title.lower().replace(' ', '_'),resolution=75)
     plt.show();
 
 if __name__ == '__main__':

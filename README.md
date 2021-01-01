@@ -98,8 +98,9 @@ After EDA, the cleaned dataset was bought into the modeling notebook, and all bo
 ## EDA Visualizations
 
 ### Binary Target 
-![Binary Target](./images/compressed/binary_target.png)
-
+<p align="center">
+<img src="./images/binary_target.png" width="500">
+</p>
 High class imbalance with:
 
 - 2165 CT
@@ -108,24 +109,36 @@ High class imbalance with:
 - 31 food deserts (1)
 
 ## Geographic distribution
-![Geospatial Distribution](./images/map_target.png)
-![Rate per County](./images/compressed/food_desert_rate_county.png)
+<p align="center">
+<img src="./images/map_target_trans_no.png" width="800">
+</p>
+<p align="center">
+<img src="./images/food_desert_rate_county.png" width="600">
+</p>
 
 <u>Observations</u>
 - No CT flagged for food desert in Manhattan
 - Although most frequent in Kings and Queens counties, highest proportion in Richmond
 
 ### White per CT with Food Deserts
-![white per ct](./images/compressed/white_per_census_tract_&_food_deserts.png)
+<p align="center">
+<img src="./images/white_per_census_tract_&_food_deserts.png">
+</p>
 
 ### Black per CT with Food Deserts
-![black per ct](./images/compressed/black_per_census_tract_&_food_deserts.png)
+<p align="center">
+<img src="./images/black_per_census_tract_&_food_deserts.png">
+</p>
 
 ### Latinx per CT with Food Deserts
-![latinx per ct](./images/compressed/latinx_per_census_tract_&_food_deserts.png)
+<p align="center">
+<img src="./images/latinx_per_census_tract_&_food_deserts.png">
+</p>
 
 ### Asian per CT with Food Deserts
-![asian per ct](./images/compressed/asian_per_census_tract_&_food_deserts.png)
+<p align="center">
+<img src="./images/asian_per_census_tract_&_food_deserts.png">
+</p>
 
 <u>Observations</u>
 - Most food deserts in areas with low rate of white and asian populations
@@ -133,7 +146,9 @@ High class imbalance with:
 - Some food deserts in areas with high rate of latinx population
 
 ### Median Income vs. Poverty Rate
-![Median Income vs Poverty Rate](./images/compressed/income_pov_rate.png)
+<p align="center">
+<img src="./images/income_pov_rate.png" width="600">
+</p>
 
 <u>Observations</u>
 - Highly negatively correlated features suggesting more significant weights in modeling
@@ -142,7 +157,9 @@ High class imbalance with:
 Our final model is Decision Tree Classifier (DTC) with GridSearch. 
 
 #### Decision Tree Classifer Plot
-![Decision Tree Plot](./images/decision_tree_plot.png)
+<p align="center">
+<img src="./images/decision_tree_plot.png">
+</p>
 
 Final model results indicate most efficient feature splitting on:
 
@@ -173,12 +190,16 @@ This tells us that although that low-access and low-income are the primary indic
 **Recall** = .85
 
 **Decision Tree Classifer Confusion Matrix**
-![DTC2 Confusion Matrix](./images/compressed/dtc_con_matrix_with_grid.png)
+<p align="center">
+<img src="./images/dtc_con_matrix_with_grid.png" width="600">
+</p>
 
 In this instance `F1` was chosen as the primary metric with `Recall` secondary. This is because with the goal of expanded FRESH coverage to areas identified as food deserts, or introducing urban agriculture initiatives, limitation of False Positives was of the utmost importance. We would not want to identify an area as a food desert, and start shifting resources to implement zoning or tax incentives only to find it is not in need of supermarket expansion. Therefore, utilizing `F1` as a primary metric to achieve a more harmonic mean was desirable. However, limiting False Negatives (not identfying a food desert when it is) was important as well. Therefore, `Recall` was chosen as a secondary metric to limit False Negatives.
 
 ### Geospatial depictions of Final Model Predictions
-![Model Predictions](./images/dtc_final_model_predictions.png)
+<p align="center">
+<img src="./images/dtc_final_model_predictions.png">
+</p>
 
 Model predicted 30 (out of 31) values as True and 2134 as False.
 - True Positive - 30 Olive CT are those that were predicted corectly 
@@ -188,7 +209,9 @@ Model predicted 30 (out of 31) values as True and 2134 as False.
 - Missing Values - lightgrey CT that do not have values i.e. parks, cemetaries etc...
 
 ###  Geospatial depictions of Final Model Predictions with FRESH geometry overlay
-![Model Predictions w FRESH](./images/compressed/dtc_final_model_predictions_with_fresh.png)
+<p align="center">
+<img src="./images/compressed/dtc_final_model_predictions_with_fresh.png">
+</p>
 
 The above map shows us that most food deserts lay within FRESH boundaries, however there are some that do not, most prominently in Queens and Staten Island. That said, these food deserts classifications are based on a study conducted in 2017, and the FRESH data is recent, therefore this model would need to be run on newer data, then compared and contrasted with FRESH boundaries prior to invoking any policy changes. 
 
