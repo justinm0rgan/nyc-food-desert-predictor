@@ -108,7 +108,7 @@ High class imbalance with:
 - 31 food deserts (1)
 
 ## Geographic distribution
-![Geospatial Distribution](./images/compressed/map_target.png)
+![Geospatial Distribution](./images/map_target.png)
 ![Rate per County](./images/compressed/food_desert_rate_county.png)
 
 <u>Observations</u>
