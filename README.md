@@ -98,7 +98,7 @@ After EDA, the cleaned dataset was bought into the modeling notebook, and all bo
 ## EDA Visualizations
 
 ### Binary Target 
-![Binary Target](./images/binary_target.png)
+![Binary Target](./images/compressed/binary_target.png)
 
 High class imbalance with:
 
@@ -108,24 +108,24 @@ High class imbalance with:
 - 31 food deserts (1)
 
 ## Geographic distribution
-![Geospatial Distribution](./images/map_target.png)
-![Rate per County](./images/food_desert_rate_county.png)
+![Geospatial Distribution](./images/compressed/map_target.png)
+![Rate per County](./images/compressed/food_desert_rate_county.png)
 
 <u>Observations</u>
 - No CT flagged for food desert in Manhattan
 - Although most frequent in Kings and Queens counties, highest proportion in Richmond
 
 ### White per CT with Food Deserts
-![white per ct](./images/white_per_census_tract_&_food_deserts.png)
+![white per ct](./images/compressed/white_per_census_tract_&_food_deserts.png)
 
 ### Black per CT with Food Deserts
-![black per ct](./images/black_per_census_tract_&_food_deserts.png)
+![black per ct](./images/compressed/black_per_census_tract_&_food_deserts.png)
 
 ### Latinx per CT with Food Deserts
-![latinx per ct](./images/latinx_per_census_tract_&_food_deserts.png)
+![latinx per ct](./images/compressed/latinx_per_census_tract_&_food_deserts.png)
 
 ### Asian per CT with Food Deserts
-![asian per ct](./images/asian_per_census_tract_&_food_deserts.png)
+![asian per ct](./images/compressed/asian_per_census_tract_&_food_deserts.png)
 
 <u>Observations</u>
 - Most food deserts in areas with low rate of white and asian populations
@@ -133,7 +133,7 @@ High class imbalance with:
 - Some food deserts in areas with high rate of latinx population
 
 ### Median Income vs. Poverty Rate
-![Median Income vs Poverty Rate](./images/income_pov_rate.png)
+![Median Income vs Poverty Rate](./images/compressed/income_pov_rate.png)
 
 <u>Observations</u>
 - Highly negatively correlated features suggesting more significant weights in modeling
@@ -173,7 +173,7 @@ This tells us that although that low-access and low-income are the primary indic
 **Recall** = .85
 
 **Decision Tree Classifer Confusion Matrix**
-![DTC2 Confusion Matrix](./images/dtc_con_matrix_with_grid.png)
+![DTC2 Confusion Matrix](./images/compressed/dtc_con_matrix_with_grid.png)
 
 In this instance `F1` was chosen as the primary metric with `Recall` secondary. This is because with the goal of expanded FRESH coverage to areas identified as food deserts, or introducing urban agriculture initiatives, limitation of False Positives was of the utmost importance. We would not want to identify an area as a food desert, and start shifting resources to implement zoning or tax incentives only to find it is not in need of supermarket expansion. Therefore, utilizing `F1` as a primary metric to achieve a more harmonic mean was desirable. However, limiting False Negatives (not identfying a food desert when it is) was important as well. Therefore, `Recall` was chosen as a secondary metric to limit False Negatives.
 
@@ -188,7 +188,7 @@ Model predicted 30 (out of 31) values as True and 2134 as False.
 - Missing Values - lightgrey CT that do not have values i.e. parks, cemetaries etc...
 
 ###  Geospatial depictions of Final Model Predictions with FRESH geometry overlay
-![Model Predictions w FRESH](./images/dtc_final_model_predictions_with_fresh.png)
+![Model Predictions w FRESH](./images/compressed/dtc_final_model_predictions_with_fresh.png)
 
 The above map shows us that most food deserts lay within FRESH boundaries, however there are some that do not, most prominently in Queens and Staten Island. That said, these food deserts classifications are based on a study conducted in 2017, and the FRESH data is recent, therefore this model would need to be run on newer data, then compared and contrasted with FRESH boundaries prior to invoking any policy changes. 
 
