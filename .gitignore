@@ -137,3 +137,6 @@ dmypy.json
 
 #API keys
 config.py
+
+#docs not ready to be seen
+new_acs_data.ipynb
