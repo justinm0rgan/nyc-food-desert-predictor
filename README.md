@@ -210,7 +210,7 @@ Model predicted 30 (out of 31) values as True and 2134 as False.
 
 ###  Geospatial depictions of Final Model Predictions with FRESH geometry overlay
 <p align="center">
-<img src="./images/compressed/dtc_final_model_predictions_with_fresh.png">
+<img src="./images/dtc_final_model_predictions_with_fresh.png">
 </p>
 
 The above map shows us that most food deserts lay within FRESH boundaries, however there are some that do not, most prominently in Queens and Staten Island. That said, these food deserts classifications are based on a study conducted in 2017, and the FRESH data is recent, therefore this model would need to be run on newer data, then compared and contrasted with FRESH boundaries prior to invoking any policy changes. 
