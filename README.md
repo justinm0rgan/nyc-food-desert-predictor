@@ -28,7 +28,7 @@ The aforementioned inform the _target_ variable of:
 
 **Low-income and low-access tract measured at .5 mile** (LILATracts_halfAnd10) - A low-income tract with at least 500 people, or 33 percent of the population, living more than 1/2 mile from the nearest supermarket, super-center, or large grocery store.
 
-Specific columns and their respective definitions are linked [here](./images/DATADICT.md).
+Specific columns and their respective definitions are linked <a href="./images/DATADICT.md" target="_blank">here</a>
 
 ## Methodology
 
