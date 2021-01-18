@@ -187,7 +187,7 @@ For any additional questions, please contact **Justin Williams - justinmorganwil
 │   ├── eda.ipynb                                    <- Exploratory data analysis in Jupyter notebook
 │   ├── modeling.ipynb                               <- Modeling analysis in Jupyter notebook
 ├── slide_deck.pdf                               <- PDF version of project presentation
-├── src                                          <- Functions imported into Jupyter Notebooks
+├── src                                          <- Functions imported into Jupyter Notebook
 └── images                                       <- Generated from code
 ```
 
